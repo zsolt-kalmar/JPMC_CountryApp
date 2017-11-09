@@ -1,0 +1,71 @@
+.CountryDetails .CountryDetailsHeader {
+  margin-bottom: 1em;
+}
+.CountryDetails .CountryDetailsHeader h2 {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+.CountryDetails .CountryDetailsLoading {
+  display: block;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0px 0px 4px 1px rgba(204, 204, 204, 0.5);
+  background-color: #fff;
+  padding: 1em;
+  line-height: 1.5em;
+  font-weight: bold;
+}
+.CountryDetails .CountryDetailsInfo {
+  display: block;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0px 0px 4px 1px rgba(204, 204, 204, 0.5);
+  background-color: #fff;
+  padding: 1em;
+  line-height: 1.5em;
+}
+.CountryDetails .CountryDetailsInfo ul {
+  display: table;
+  width: 100%;
+}
+.CountryDetails .CountryDetailsInfo ul li {
+  display: table-row;
+}
+.CountryDetails .CountryDetailsInfo ul li label {
+  font-weight: bold;
+  display: table-cell;
+  text-align: right;
+  white-space: nowrap;
+  padding: 0.5em;
+}
+.CountryDetails .CountryDetailsInfo ul li span {
+  display: table-cell;
+  text-align: left;
+  width: 100%;
+}
+.CountryDetails .CountryDetailsInfo .CountryDetailsInfoError {
+  color: #884444;
+  font-weight: bold;
+}
+.CountryDetails .CountryDetailsControls {
+  display: block;
+  text-align: right;
+  margin-top: 1em;
+}
+.CountryDetails .CountryDetailsControls a {
+  display: inline-block;
+  background-color: #006db7;
+  color: #fff;
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+  transition: background-color 0.5s;
+}
+.CountryDetails .CountryDetailsControls a::before {
+  content: '\25C2';
+}
+.CountryDetails .CountryDetailsControls a:hover {
+  border: 1px solid #fff;
+  outline: 1px solid #006db7;
+  background-color: #004f84;
+}

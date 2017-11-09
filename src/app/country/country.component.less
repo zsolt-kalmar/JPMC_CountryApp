@@ -1,0 +1,86 @@
+.CountryDetails {
+    .CountryDetailsHeader {
+        margin-bottom: 1em;
+        
+        h2 {
+            font-size: 1em;
+            line-height: 1.5em;
+            font-weight: bold;
+        }
+    }
+
+    .CountryDetailsLoading {
+        display: block;
+        border:1px solid #ccc;
+        overflow:hidden;
+        box-shadow: 0px 0px 4px 1px rgba(204, 204, 204, 0.50);
+        background-color: #fff;      
+        padding:1em;
+        line-height: 1.5em;
+        font-weight: bold;
+    }
+
+    .CountryDetailsInfo {
+        display: block;
+        border:1px solid #ccc;
+        overflow:hidden;
+        box-shadow: 0px 0px 4px 1px rgba(204, 204, 204, 0.50);
+        background-color: #fff;      
+        padding:1em;
+        line-height: 1.5em;
+        
+        ul {
+            display: table;
+            width:100%;
+
+            li {
+                display: table-row;
+
+                label {
+                    font-weight: bold;
+                    display: table-cell;
+                    text-align:right;
+                    white-space: nowrap;
+                    padding:0.5em;
+                }
+
+                span {
+                    display: table-cell;
+                    text-align: left;
+                    width:100%;
+                }
+            }
+        }
+
+        .CountryDetailsInfoError {
+            color:#884444;
+            font-weight: bold;
+        }
+    }
+
+    .CountryDetailsControls {
+        display: block;
+        text-align: right;
+        margin-top:1em;
+
+        a {
+            @bgColor:#006db7;
+            display: inline-block;
+            background-color: @bgColor;
+            color:#fff;
+            padding:0.5em 1em;
+            border:1px solid #ccc;
+            transition: background-color 0.5s;
+
+            &::before {
+                content:'\25C2';
+            }
+
+            &:hover {
+                border:1px solid #fff;
+                outline: 1px solid @bgColor;
+                background-color: darken(@bgColor, 10%);
+            }
+        }
+    }
+}

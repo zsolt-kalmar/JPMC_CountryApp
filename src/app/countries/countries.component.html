@@ -1,0 +1,21 @@
+<section class="CountryList">
+  <header class="CountryListHeader">
+    <h2>Country list</h2>
+  </header>
+  <section *ngIf="countries && countries !== 'error'" class="CountryListItems">
+    <ul>
+      <li *ngFor="let country of countries" (click)="onSelect(country)">
+        <a routerLink="/country/{{country.iso2Code}}" title="{{country.name}}">
+          <span class="CountryListCode">{{country.iso2Code}}</span>
+          <span class="CountryListName">{{country.name}}</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+  <section *ngIf="!countries" class="CountryListLoading">
+    Loading...
+  </section>
+  <section *ngIf="countries === 'error'" class="CountryListError">
+    Country listing service is currently unavailable. Please try again later.
+  </section>
+</section>

@@ -1,0 +1,108 @@
+.CountryList {
+    display: block; 
+
+    .CountryListHeader{
+        margin-bottom: 1em;
+
+        h2 {
+            font-weight: bold;
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+    }
+
+    .CountryListItems {
+        ul {
+            @gap:0.25em;
+            margin:-@gap;
+            text-align: center;
+
+            li {
+                display:inline-block;
+                position: relative;
+                width:10vw;
+                padding-bottom: 10vw;
+                overflow:hidden;
+                
+                a {
+                    display: block;
+                    position: absolute;
+                    top:@gap;
+                    left:@gap;
+                    right:@gap;
+                    bottom:@gap;
+                    border:1px solid #ccc;
+                    overflow:hidden;
+                    box-shadow: 0px 0px 4px 1px rgba(204, 204, 204, 0.50);
+                    background-color: #fff;
+
+                    &:hover {
+                        background-color:#e0f0e0;
+                    }
+
+                    .CountryListCode {
+                        display: block;
+                        position: absolute;
+                        font-weight: bold;
+                        top:50%;
+                        left:50%;
+                        transform: translate(-50%,-50%);
+                    }
+
+                    .CountryListName {
+                        display: none;
+                        
+                    }
+                }
+                
+                @media screen and (min-width:65em) {
+                    width: 8vw;
+                    padding-bottom: 8vw;
+                }
+
+                @media screen and (min-width:35em) and (max-width:65em)  {
+                    width:10vw;
+                    padding-bottom: 10vw;
+                }
+
+                @media screen and (min-width:20em) and (max-width:35em)  {
+                    width:15vw;
+                    padding-bottom: 15vw;
+                }
+
+                @media screen and (max-width:20em)  {
+                    width:20vw;
+                    padding-bottom: 20vw;
+                }
+
+                @media screen and (max-width:10em)  {
+                    width:50vw;
+                    padding-bottom: 50vw;
+                }
+            }
+        }
+    }
+
+    .CountryListLoading {
+        display: block;
+        position: relative;
+        border:1px solid #ccc;
+        overflow:hidden;
+        box-shadow: 0px 0px 4px 1px rgba(204, 204, 204, 0.50);
+        background-color: #fff;        
+        padding:1em;
+        font-weight: bold;
+    }
+    
+    .CountryListError {
+        display: block;
+        position: relative;
+        border:1px solid #ccc;
+        overflow:hidden;
+        box-shadow: 0px 0px 4px 1px rgba(204, 204, 204, 0.50);
+        background-color: #fff;        
+        padding:1em;
+        font-weight: bold;
+        color:#884444;
+    }
+} 

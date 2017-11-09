@@ -1,0 +1,99 @@
+.CountryList {
+  display: block;
+}
+.CountryList .CountryListHeader {
+  margin-bottom: 1em;
+}
+.CountryList .CountryListHeader h2 {
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.CountryList .CountryListItems ul {
+  margin: -0.25em;
+  text-align: center;
+}
+.CountryList .CountryListItems ul li {
+  display: inline-block;
+  position: relative;
+  width: 10vw;
+  padding-bottom: 10vw;
+  overflow: hidden;
+}
+.CountryList .CountryListItems ul li a {
+  display: block;
+  position: absolute;
+  top: 0.25em;
+  left: 0.25em;
+  right: 0.25em;
+  bottom: 0.25em;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0px 0px 4px 1px rgba(204, 204, 204, 0.5);
+  background-color: #fff;
+}
+.CountryList .CountryListItems ul li a:hover {
+  background-color: #e0f0e0;
+}
+.CountryList .CountryListItems ul li a .CountryListCode {
+  display: block;
+  position: absolute;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.CountryList .CountryListItems ul li a .CountryListName {
+  display: none;
+}
+@media screen and (min-width: 65em) {
+  .CountryList .CountryListItems ul li {
+    width: 8vw;
+    padding-bottom: 8vw;
+  }
+}
+@media screen and (min-width: 35em) and (max-width: 65em) {
+  .CountryList .CountryListItems ul li {
+    width: 10vw;
+    padding-bottom: 10vw;
+  }
+}
+@media screen and (min-width: 20em) and (max-width: 35em) {
+  .CountryList .CountryListItems ul li {
+    width: 15vw;
+    padding-bottom: 15vw;
+  }
+}
+@media screen and (max-width: 20em) {
+  .CountryList .CountryListItems ul li {
+    width: 20vw;
+    padding-bottom: 20vw;
+  }
+}
+@media screen and (max-width: 10em) {
+  .CountryList .CountryListItems ul li {
+    width: 50vw;
+    padding-bottom: 50vw;
+  }
+}
+.CountryList .CountryListLoading {
+  display: block;
+  position: relative;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0px 0px 4px 1px rgba(204, 204, 204, 0.5);
+  background-color: #fff;
+  padding: 1em;
+  font-weight: bold;
+}
+.CountryList .CountryListError {
+  display: block;
+  position: relative;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  box-shadow: 0px 0px 4px 1px rgba(204, 204, 204, 0.5);
+  background-color: #fff;
+  padding: 1em;
+  font-weight: bold;
+  color: #884444;
+}

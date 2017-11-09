@@ -1,0 +1,47 @@
+<section class="CountryDetails">
+    <header class="CountryDetailsHeader">
+        <h2>Country details</h2>
+    </header>
+    <section *ngIf="country">
+        <section class="CountryDetailsInfo">
+            <ul *ngIf="country !== 'error'">
+                <li>
+                    <label>Name:</label>
+                    <span>{{country.name}}</span>
+                </li>
+                <li>
+                    <label>Capital:</label>
+                    <span *ngIf="country.capitalCity">{{country.capitalCity}}</span>
+                    <span *ngIf="!country.capitalCity">n/a</span>
+                </li>
+                <li>
+                    <label>Region:</label>
+                    <span>{{country.region.value}}</span>
+                </li>
+                <li>
+                    <label>Income level:</label>
+                    <span>{{country.incomeLevel.value}}</span>
+                </li>
+                <li *ngIf="indicators['NY.GDP.MKTP.CD']">
+                    <label>{{indicators['NY.GDP.MKTP.CD'].indicator.value}}:</label>
+                    <span>{{indicators['NY.GDP.MKTP.CD'].value}}</span>
+                </li>
+                <li *ngIf="!indicators['NY.GDP.MKTP.CD']">
+                    <label>GDP:</label>
+                    <span>n/a</span>
+                </li>
+            </ul>
+            <div *ngIf="country === 'error'" class="CountryDetailsInfoError">
+                Country listing service is currently unavailable. Please try again later.
+            </div>
+        </section>
+        <footer class="CountryDetailsControls">
+            <a routerLink="/countries" title="Back to the list">
+                <span>Back to countries</span>
+            </a>
+        </footer>
+    </section>
+    <section *ngIf="!country" class="CountryDetailsLoading">
+        Loading...
+    </section>
+</section>
