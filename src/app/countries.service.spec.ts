@@ -1,11 +1,12 @@
 import { TestBed, inject } from '@angular/core/testing';
-
 import { CountriesService } from './countries.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('CountriesService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [CountriesService]
+      providers: [CountriesService],
+      imports: [HttpClientTestingModule]
     });
   });
 
