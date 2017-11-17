@@ -18,7 +18,7 @@ export class CountriesComponent implements OnInit {
       if (data === CountriesServiceState.Error || data[0] && data[0]['message']) {
         this.countries = 'error';
       } else if (data && data[1]) {
-        this.countries = data[1]
+        this.countries = data[1];
       } else {
         this.countries = null;
       }

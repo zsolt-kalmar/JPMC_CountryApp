@@ -18,6 +18,7 @@
 }
 .CountryDetails .CountryDetailsInfo {
   display: block;
+  position: relative;
   border: 1px solid #ccc;
   overflow: hidden;
   box-shadow: 0px 0px 4px 1px rgba(204, 204, 204, 0.5);
@@ -25,9 +26,21 @@
   padding: 1em;
   line-height: 1.5em;
 }
+.CountryDetails .CountryDetailsInfo .CountryDetailsInfoBg {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  transform: translate(0, -50%);
+  color: #f4f4f4;
+  font-size: 5em;
+  z-index: 99;
+}
 .CountryDetails .CountryDetailsInfo ul {
   display: table;
+  position: relative;
   width: 100%;
+  z-index: 100;
 }
 .CountryDetails .CountryDetailsInfo ul li {
   display: table-row;

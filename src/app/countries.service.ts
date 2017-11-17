@@ -28,7 +28,7 @@ export class CountriesService {
       return cahcedData.observable;
     } else {
       cahcedData.observable = this.http.get(url)
-        .catch(e => { return Observable.of(CountriesServiceState.Error); })
+        .catch(e =>  Observable.of(CountriesServiceState.Error))
         .do(data => { cahcedData.data = data; cahcedData.observable = null; })
         .share();
       return cahcedData.observable;
@@ -54,6 +54,6 @@ export class CountriesService {
       this.indicators[code][indicator] = new Cached();
     }
 
-    return this.fetchCached('https://api.worldbank.org2/v2/countries/' + code + '/indicators/' + indicator + '?MRV=1&format=json', this.indicators[code][indicator]);
+    return this.fetchCached('https://api.worldbank.org/v2/countries/' + code + '/indicators/' + indicator + '?MRV=1&format=json', this.indicators[code][indicator]);
   }
 }
